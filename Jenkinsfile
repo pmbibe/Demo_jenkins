@@ -21,6 +21,7 @@ pipeline {
       steps {
         echo "--------------------Deploy Stage---------------------"
         junit 'Demo_jenkins/build/logs/*.xml'
+        echo "${result.phpunit}"
         
       }
     }
