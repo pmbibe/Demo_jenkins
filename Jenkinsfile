@@ -8,7 +8,6 @@ pipeline {
         echo "--------------------Prepare Stage---------------------"
         sh "rm -rf Demo_jenkins"
         sh "https://github.com/pmbibe/Demo_jenkins"
-        sh "phpunit --version"
       }
     }
     stage('Test') {
