@@ -141,14 +141,12 @@
     </target>
 
     <target name="-check-failure">
+         <echo file="result.txt"> ${result.phpunit}
+         </echo>
         <fail message="PHPUnit did not finish successfully">
-        <echo file="result.txt"> ${result.phpunit}
-        </echo>
             <condition>
                 <not>
                     <equals arg1="${result.phpunit}" arg2="0"/>
-                     <echo file="result.txt"> ${result.phpunit}
-                     </echo>
                 </not>
             </condition>
         </fail>
