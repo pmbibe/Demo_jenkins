@@ -20,7 +20,6 @@ pipeline {
     stage('Deploy') {
       steps {
         echo "--------------------Deploy Stage---------------------"
-        sh "pwd"
         junit 'Demo_jenkins/build/logs/*.xml'
         
       }
