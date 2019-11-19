@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Money" default="build">
+<project name="Demo_jenkins" default="build">
     <target name="build" depends="prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox,-check-failure"/>
 
     <target name="clean" unless="clean.done" description="Cleanup build artifacts">
@@ -19,8 +19,6 @@
     </target>
 
     <target name="generate-code" description="Generate Currency-specific subclasses of Money and autoloader code">
-        <exec executable="${basedir}/build/generate-child-classes.php" taskname="generate-code"/>
-
         <exec executable="${basedir}/build/tools/phpab.phar" taskname="generate-code">
             <arg value="--output"/>
             <arg path="src/autoload.php"/>
