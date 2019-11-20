@@ -21,7 +21,7 @@ pipeline {
       steps {
         echo "--------------------Deploy Stage---------------------"
         junit 'Demo_jenkins/build/logs/*.xml'
-        sh "mv Demo_jenkins/*.php  /usr/share/nginx/html/"
+        sh "./Deploy.sh"
         
       }
     }
