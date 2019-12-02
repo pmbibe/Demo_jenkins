@@ -9,6 +9,7 @@ pipeline {
         sh "rm -rf Demo_jenkins"
         sh "git clone https://github.com/pmbibe/Demo_jenkins"
         sh "chmod -R 777 Demo_jenkins"
+        sh "pwd"
         sh "ls -la"
       }
     }
@@ -23,7 +24,7 @@ pipeline {
         echo "--------------------Deploy Stage---------------------"
         junit 'Demo_jenkins/build/logs/*.xml'
         sh "pwd"
-        sh "./Deploy.sh"
+        // sh "./Deploy.sh"
         
       }
     }
