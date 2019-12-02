@@ -9,6 +9,7 @@ pipeline {
         sh "rm -rf Demo_jenkins"
         sh "git clone https://github.com/pmbibe/Demo_jenkins"
         sh "chmod -R 755 Demo_jenkins"
+        sh "ls -la"
       }
     }
     stage('Test') {
