@@ -8,7 +8,7 @@ pipeline {
         echo "--------------------Prepare Stage---------------------"
         sh "rm -rf *"
         sh "git clone https://github.com/pmbibe/Demo_jenkins"
-        sh "chmod -R 777 Demo_jenkins"
+        sh "chmod -R 755 Demo_jenkins"
         sh "pwd"
         sh "ls -la"
       }
