@@ -1,5 +1,5 @@
 #!/bin/bash
-result=$(awk '{if ($1 == 0 || $1 == 1) print $1}' result.txt)
+result=$(awk '{if ($1 == 0 || $1 == 1) print $1}' Demo_jenkins/result.txt)
 if [ $result -eq 0 ]
 then
 echo "OK"
