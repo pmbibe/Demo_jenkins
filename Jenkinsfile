@@ -24,7 +24,7 @@ pipeline {
         echo "--------------------Deploy Stage---------------------"
         junit 'Demo_jenkins/build/logs/*.xml'
         sh "pwd"
-        // sh "./Deploy.sh"
+        sh "Demo_jenkins/Deploy.sh"
         
       }
     }
