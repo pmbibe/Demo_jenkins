@@ -1,5 +1,5 @@
 pipeline {
-    agent { dockerfile true }
+    agent any
     stages {
         stage('Prepare') {
             steps {
@@ -20,7 +20,7 @@ pipeline {
                 echo "--------------------Deploy Stage---------------------"
                 junit 'Demo_jenkins/build/logs/*.xml'
                 sh "pwd"
-                //sh "Demo_jenkins/Deploy.sh"
+                sh "Demo_jenkins/Deploy.sh"
             }
         }
     }
