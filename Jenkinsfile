@@ -23,5 +23,13 @@ pipeline {
                 sh "Demo_jenkins/Deploy.sh"
             }
         }
+        stage('RollBack') {
+            steps {
+                echo "--------------------Deploy Stage---------------------"
+                input(message: 'Do you like Java?', ok: 'Yes', 
+                        parameters: [booleanParam(defaultValue: true, 
+                        description: 'If you like Java, just push the button',name: 'Yes?')])
+            }
+        }
     }
 }
